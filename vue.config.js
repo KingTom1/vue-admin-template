@@ -18,6 +18,9 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
+  configureWebpack: {
+    devtool: 'source-map'
+  },
   publicPath: '/',
   outputDir: 'dist',
   assetsDir: 'static',
@@ -34,7 +37,7 @@ module.exports = {
       // change xxx-api/login => mock/login
       // detail: https://cli.vuejs.org/config/#devserver-proxy
       [process.env.VUE_APP_BASE_API]: {
-        target: `http://localhost:${port}/mock`,
+        target: `http://127.0.0.1:8000`, 
         changeOrigin: true,
         pathRewrite: {
           ['^' + process.env.VUE_APP_BASE_API]: ''

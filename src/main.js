@@ -24,6 +24,8 @@ import '@/permission' // permission control
  * mockXHR()
  */
 
+import { mockXHR } from '../mock'
+mockXHR()
 // set ElementUI lang to EN
 Vue.use(ElementUI, { locale })
 
