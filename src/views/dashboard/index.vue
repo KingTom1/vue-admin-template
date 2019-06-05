@@ -1,6 +1,8 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <div class="dashboard-text">你好首页 {{ name }}</div>
+    <div class="dashboard-text">你好首页 {{ roles }}</div>
+    <div class="dashboard-text">你好首页 {{ token }}</div>
   </div>
 </template>
 
@@ -9,9 +11,16 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'Dashboard',
+  data() {
+    return {
+      currentRole: 'adminDashboard'
+    }
+  },
   computed: {
     ...mapGetters([
-      'name'
+      'name',
+      'roles',
+      'token'
     ])
   }
 }

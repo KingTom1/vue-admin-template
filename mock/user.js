@@ -18,7 +18,7 @@ const users = {
     roles: ['editor'],
     introduction: 'I am an editor',
     avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    name: 'Normal Editor'
+    name: '我是李成用户'
   }
 }
 
@@ -52,7 +52,10 @@ export default [
     type: 'get',
     response: config => {
       const { token } = config.query
+      console.log(token)
+      console.log(users)
       const info = users[token]
+      console.log(info)
 
       // mock error
       if (!info) {
